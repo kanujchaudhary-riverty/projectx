@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Future State Journey: Lena, 32, Cologne</title>
+<style>
+  :root {
+    --paper: #F2F5F7;
+    --card: #FFFFFF;
+    --ink: #13233A;
+    --muted: #55657A;
+    --line: #CBD5DF;
+    --teal: #0B7A66;
+    --teal-tint: #DDF1EC;
+    --amber: #B35F00;
+    --amber-tint: #FBEBD3;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .page { max-width: 1180px; margin: 0 auto; padding: 40px 28px 56px; }
+
+  header { max-width: 760px; margin-bottom: 36px; }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+  }
+  header p { margin: 0; color: var(--muted); font-size: 16px; max-width: 64ch; }
+  .persona { margin-top: 14px; color: var(--ink); font-size: 14px; }
+  .persona b { font-weight: 600; }
+
+  .journey { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-top: 28px; }
+  .journey::before {
+    content: "";
+    position: absolute; top: 14px; left: 14px; right: 14px;
+    height: 2px; background: var(--teal);
+  }
+  .stage { position: relative; }
+  .node {
+    position: absolute; top: -28px; left: 0;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--teal); color: #fff;
+    font-weight: 600; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .stage-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 18px 18px;
+    height: 100%;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.2; margin: 0; }
+  .field-label { font-size: 13px; font-weight: 600; color: var(--muted); margin: 0 0 4px; }
+  .line { margin: 0; font-size: 14.5px; }
+  .line .to { color: var(--teal); font-weight: 600; padding: 0 2px; }
+  .pain {
+    margin-top: auto;
+    background: var(--amber-tint);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .pain .field-label { color: var(--amber); }
+  .pain .to { color: var(--amber); }
+
+  .why {
+    margin: 36px 0 0;
+    padding: 14px 18px;
+    border: 1px dashed var(--muted);
+    border-radius: 10px;
+    display: flex; flex-wrap: wrap; gap: 6px 28px;
+    font-size: 14px;
+  }
+  .why b { font-weight: 600; }
+
+  section.advantages { margin-top: 44px; }
+  h3 { font-family: var(--serif); font-weight: 500; font-size: 26px; margin: 0 0 18px; }
+  .adv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .adv { border-top: 3px solid var(--teal); padding-top: 12px; }
+  .adv h4 { font-size: 16px; font-weight: 600; margin: 0 0 6px; }
+  .adv p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+  .assume {
+    margin-top: 40px;
+    background: var(--teal-tint);
+    border-radius: 10px;
+    padding: 18px 22px;
+    font-size: 14px;
+  }
+  .assume h4 { margin: 0 0 8px; font-size: 15px; font-weight: 600; }
+  .assume ul { margin: 0; padding-left: 20px; }
+  .assume li + li { margin-top: 6px; }
+
+  @media (max-width: 960px) {
+    .journey { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .journey::before { display: none; }
+    .adv-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 30px; }
+    .journey { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .page { padding: 16px; max-width: none; }
+    .stage-card, .pain, .assume { break-inside: avoid; }
+    @page { size: A4 landscape; margin: 10mm; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1>Future state: keep it first, pay later, anywhere</h1>
+    <p>How Lena moves from defaulting to whichever provider the checkout offers to choosing a Riverty card she can trust online and at the till.</p>
+    <p class="persona"><b>Persona:</b> Lena, 32, Cologne. Salaried, mobile-first, uses BNPL on most non-trivial purchases. <b>Goal:</b> keep money in her account until she has decided to keep the item, without choosing a provider each time.</p>
+  </header>
+
+  <div class="journey">
+
+    <article class="stage">
+      <div class="node" aria-hidden="true">1</div>
+      <div class="stage-card">
+        <h2>Activate in minutes</h2>
+        <div>
+          <p class="field-label">User action</p>
+          <p class="line">Verifies identity once in app <span class="to">&rarr;</span> card live within minutes.</p>
+        </div>
+        <div>
+          <p class="field-label">Internal state</p>
+          <p class="line">Monitors activation end to end <span class="to">&rarr;</span> stuck users get fast help.</p>
+        </div>
+        <div class="pain">
+          <p class="field-label">Pain point addressed</p>
+          <p class="line">Stalled activation (BUG-2031) <span class="to">&rarr;</span> first use isn't blocked.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="node" aria-hidden="true">2</div>
+      <div class="stage-card">
+        <h2>Keep it, online</h2>
+        <div>
+          <p class="field-label">User action</p>
+          <p class="line">Pays with card anywhere online <span class="to">&rarr;</span> money stays in her account.</p>
+        </div>
+        <div>
+          <p class="field-label">Internal state</p>
+          <p class="line">Holds each purchase as pending <span class="to">&rarr;</span> nothing debited until she decides.</p>
+        </div>
+        <div class="pain">
+          <p class="field-label">Pain point addressed</p>
+          <p class="line">Pay-now only (BUG-2060) <span class="to">&rarr;</span> "decide first, pay later" restored.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="node" aria-hidden="true">3</div>
+      <div class="stage-card">
+        <h2>Keep it, in store</h2>
+        <div>
+          <p class="field-label">User action</p>
+          <p class="line">Taps phone at any till <span class="to">&rarr;</span> same flexibility as online.</p>
+        </div>
+        <div>
+          <p class="field-label">Internal state</p>
+          <p class="line">Wallet and terminal acceptance run reliably <span class="to">&rarr;</span> declines stop eroding trust.</p>
+        </div>
+        <div class="pain">
+          <p class="field-label">Pain point addressed</p>
+          <p class="line">Wallet and contactless declines (BUG-2049, BUG-2053) <span class="to">&rarr;</span> debit fallback fades.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="node" aria-hidden="true">4</div>
+      <div class="stage-card">
+        <h2>Decide and settle</h2>
+        <div>
+          <p class="field-label">User action</p>
+          <p class="line">Taps keep, or returns item <span class="to">&rarr;</span> pays only for what she keeps.</p>
+        </div>
+        <div>
+          <p class="field-label">Internal state</p>
+          <p class="line">Shows live spend, limit and due dates <span class="to">&rarr;</span> no surprises or missed-payment fees.</p>
+        </div>
+        <div class="pain">
+          <p class="field-label">Pain point addressed</p>
+          <p class="line">Delayed transactions, silent repayment failures (BUG-2038, BUG-2044) <span class="to">&rarr;</span> confidence replaces anxiety.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="why">
+    <span><b>Why now:</b></span>
+    <span>Klarna is already ahead in Germany and builds card habits every month.</span>
+    <span>The Mastercard and Paymentology platform is already paid for.</span>
+    <span>The Amazon Business pilot (October 2026) is absorbing capacity.</span>
+    <span>CCD2 exemption sought.</span>
+  </div>
+
+  <section class="advantages">
+    <h3>Three advantages over the manual workaround</h3>
+    <div class="adv-grid">
+      <div class="adv">
+        <h4>One place instead of many</h4>
+        <p>Lena sees every pay-later purchase and due date in one app, instead of juggling Klarna, PayPal and a debit card.</p>
+      </div>
+      <div class="adv">
+        <h4>Same behaviour everywhere</h4>
+        <p>"Keep it first, pay later" works online and at the till, so she no longer falls back to pay-now in store.</p>
+      </div>
+      <div class="adv">
+        <h4>Chosen, not defaulted</h4>
+        <p>Lena picks Riverty deliberately instead of taking what the checkout offers, giving Riverty a direct relationship and interchange while merchants keep their checkout.</p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="assume">
+    <h4>Two assumptions to confirm</h4>
+    <ul>
+      <li><b>Strategy wording:</b> "Human-led curation" reads like it came from a streaming context. It was interpreted here as restoring brand authority through a dependable, transparent pay-later experience.</li>
+      <li><b>CCD2 exemption:</b> Treated as something being sought, not yet granted, since the case brief lists CCD2 as a blocker for the Apple wallet slot. Stage 2's pay-later behaviour depends on how it is resolved.</li>
+    </ul>
+  </aside>
+
+</main>
+</body>
+</html>
