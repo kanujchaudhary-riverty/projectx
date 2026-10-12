@@ -1,56 +1,51 @@
 # Competitive Analysis & Journey Map (Module 2)
 
 ## Responses
-- **Role, who are you solving for? (the specific user segment or profile):** Lena — evidenced in the brief, but notably not loyal. She's the indifference problem.
+- **Role, who are you solving for? (the specific user segment or profile):** Lena, a 32-year-old salaried employee in Cologne on a middling income with no real financial cushion, who shops mostly on her phone and uses BNPL on most non-trivial purchases.
 
-The underserved heavy user — named as a gap, but given no persona. If your hook rests on loyal users, this is the persona your discovery needs to build, and admitting that is more credible than filling it in.
-- **Goal, what is this user ultimately trying to achieve?:** To spend without money leaving her account until she's decided to keep what she bought — on every purchase, not only the ones where a partner merchant happens to offer it.
+- **Goal, what is this user ultimately trying to achieve?:** To pay only after she has decided to keep the item.
 
-That's close to a direct read of the brief: she tells us it isn't about affordability, she prefers the money to leave her account only after she's decided to keep the item. The second half, "on every purchase," is the extension — her stated goal applied to the rest of her spending.
-- **Friction, the main barrier (moment of misery) stopping them from succeeding:** At most checkouts, and everywhere in store, the deferral simply isn't on offer. She reaches for Klarna or PayPal because they're already on her phone, and the decision costs her nothing — she isn't frustrated, she just doesn't think about Riverty.
+- **Friction, the main barrier (moment of misery) stopping them from succeeding:** In a shop, Riverty is not offered, so she pays by debit and the money leaves her account immediately, before she knows whether she will keep what she bought.
 
-The uncomfortable part, which is worth naming rather than hiding
+- **External tools, the outside platforms or tools the user is forced to use:**
+  - **Klarna (app and checkout):** the brief says she has it installed and uses it whenever it appears at checkout. The most strongly supported alternative.
+  - **PayPal (Pay in 3 / Pay in 30):** also installed, and used as a fallback BNPL option. Also supported by the brief.
+  - **Her debit card:** the likely forced choice in a shop, where Riverty is not offered. The brief implies this but does not state it.
+  - **Her phone browser and online shops:** where she would buy later if she skips the in-store purchase.
 
-This isn't a moment of misery. It's a moment of indifference. The brief says she uses whichever option appears at checkout and rarely goes looking for Riverty — there's no pain, no workaround, no frustration she'd describe if asked.
+- **The process, the 3 to 5 manual steps the user takes to get the job done:**
+  1. Find the item in the shop and realise Riverty is not offered there.
+  2. Pay by debit, so the money leaves her account straight away, before she has decided to keep it.
+  3. Take it home and decide whether she wants to keep it.
+  4. Return it if she does not, going back to the shop or posting it.
+  5. Wait for the refund to reach her account, carrying the gap in the meantime with no cushion.
 
-That's a harder problem than misery, and it's worth saying so:
+- **Core frustration, the exact moment the process feels most "broken":** The moment she pays by debit in the shop. The money leaves her account before she has decided to keep the item. That reverses the one thing she wants from pay-later, and she has no cushion to absorb it if she changes her mind.
 
-A user in pain will switch when you remove the pain
-A user who is indifferent has no reason to switch at all
+- **The evidence, a specific quote or behavior from the research that proves this:** Her stated preference: she "prefers the money to leave her account only after she has decided to keep the item." This proves the want, and it is exactly what breaks at step 2.
 
-So the real friction isn't in Lena's experience — it's in Riverty's position. She has no unmet need urgent enough to make her seek you out, which is why brand preference sits at ~6%.
-- **External tools, the outside platforms or tools the user is forced to use:** Klarna and PayPal, both already installed on her phone and offering the same deferral Riverty does. In store, where no BNPL option exists at all, a standard debit or credit card. Across all three providers, her own banking app or memory as the only place the full picture of what she owes exists.
-- **The process, the 3 to 5 manual steps the user takes to get the job done:** Reaches checkout and scans for whichever deferred payment option is present.
-Takes it — Riverty at a partner merchant, Klarna or PayPal anywhere else.
-In store, pays by card with the money leaving immediately, since deferral isn't available.
-To defer in store, buys outright, decides at home, then returns and waits days for the refund — or keeps a buffer in her account to absorb purchases she may send back.
-Tracks obligations across three providers herself, as none shows more than its own slice.
-- **Core frustration, the exact moment the process feels most “broken”:** It doesn't feel broken to her, and that is the finding. Online, Klarna and PayPal meet her goal with no effort, so there is nothing to be frustrated by. The process only breaks in store, where the deferral she actually wants is unavailable and she falls back on paying upfront and returning later.
+- **Your journey map, a shareable link, or the map file you committed (e.g. journey-map.html):** `journey-map.html` (committed alongside this file).
 
-The deeper break is in Riverty's position rather than her experience: she is served well by someone else, which is why there is no pain to remove and no reason for her to seek Riverty out. That is the harder problem — a user in pain switches when you fix it, a user who is indifferent has no reason to switch at all.
-- **The evidence, a specific quote or behavior from the research that proves this:** From the persona brief: she prefers the money to leave her account only after she has decided to keep the item, and says it is not because she cannot afford the purchase. She has Klarna and PayPal installed and uses whichever option appears at checkout. She knows Riverty but does not prefer it and rarely goes looking for it. Brand preference in e-commerce checkouts sits at around 6%.
+## Competitive landscape
 
-The in-store behaviour in steps 3 to 5 is inferred rather than evidenced — the brief establishes that Riverty has no in-store presence but says nothing about what she does there. Confirming it is the first thing discovery needs to do.
-- **Your journey map, a shareable link, or the map file you committed (e.g. journey-map.html):** 1. Discover
+| Alternative | What it offers Lena | Why it matters | The gap Riverty can use |
+|---|---|---|---|
+| **Klarna Card** | Card that draws from the customer's own funds for everyday spending, with the option to spread the cost of a specific purchase | The direct benchmark. 6.5 million active users across 16 countries, up from 1.3 million a year earlier. Germany is Klarna's largest market by volume | Primarily a debit proposition with optional instalments on chosen purchases — not a pay-later-by-default credit line |
+| **PayPal** | Pay in 3 and Pay in 30 in Germany | The payment brand most Riverty users already carry; around 20% of German online transactions in one receipt-panel study | Online-first; no single pay-later-anywhere card proposition in the brief |
+| **Instalment card banks** (Santander Zero, Advanzia, TF Bank) | Traditional credit cards with instalment or revolving credit | Already hold the interest-income pool the card business case depends on | Credit-card experience rather than BNPL-native; no relationship with Lena's BNPL behaviour |
+| **Scalapay** (Italy) | Virtual Mastercard carrying online BNPL into physical stores | Proof that BNPL-into-stores via a virtual card works | Not active in Germany as a card proposition per the brief |
+| **FLOA and Alma** (France) | Instalments paired with their own card issuance | Proof the BNPL-plus-card model works in France | Relevant to a later French expansion rather than the German MVP |
+| **Doing nothing different** | Whatever BNPL appears at checkout, or her existing debit card | The most common alternative of all | This is the real competitor: Lena's indifference, not any one brand |
 
-User action → She's offered the card at a Riverty checkout she's already using.
-Internal state → Curious, not seeking. Zero effort spent looking.
-Pain point addressed → Indifference. We reach her where she already is, rather than waiting to be sought out.
+**What the data says about Germany specifically.** Klarna's share of German online payment transactions tripled from 4.5% in H1 2024 to 14.0% in H2 2025, before easing to 11.7% in early 2026 (email-receipt panel, n = 6,953). In its Q2 2026 results, Klarna cut its full-year volume outlook, attributing it largely to weakening discretionary spending in Germany. So the German market is both where Klarna is strongest and where it is currently softest.
 
-2. Approved
+**The honest constraint.** Klarna's brand awareness in Germany is 87%. Riverty's brand preference at checkout is around 6%. Riverty cannot win this on brand, and the proposition does not try to. It aims at Riverty's existing users, where the relationship already exists, and competes on the timing of when money leaves Lena's account rather than on awareness.
 
-User action → Applies in minutes, receives a virtual card straight to her wallet.
-Internal state → Confident she'll be accepted, since Riverty already knows her.
-Pain point addressed → No approval anxiety, no waiting for plastic, no dead time before first use.
+**Which competitors truly matter for the MVP:** Klarna Card and doing nothing. Klarna sets the bar Lena will compare against; doing nothing is what she will actually choose unless the card gives her a clear reason to switch. PayPal is a fallback behaviour rather than a direct card competitor. The instalment banks matter to the business case, not to Lena's decision.
 
-3. Spend
-
-User action → Taps anywhere, online or in store, with deferral built in.
-Internal state → Money stays put until she decides to keep the item.
-Pain point addressed → Deferral no longer limited to partner checkouts. 100% acceptance after approval.
-
-4. Control
-
-User action → Reviews purchases in one place, keeps or returns, then repays.
-Internal state → In control, with the full picture rather than three partial ones.
-Pain point addressed → No buy-return-refund workaround, no tracking obligations across providers.
+## Sources
+- Klarna Card active users and German outlook: PYMNTS, Klarna Q2 2026 — https://www.pymnts.com/earnings/2026/klarna-card-users-hit-6-5-million-but-stock-plunges-on-lower-outlook/
+- Klarna Card product description: Klarna investor news, 19 March 2026 — https://investors.klarna.com/News--Events/news/news-details/2026/Klarna-Card-reaches-5-million-active-customers/default.aspx
+- Klarna German online payment share: General Evidence receipt panel — https://www.generalevidence.com/en/insights/consumption/online-shopping/klarna-payment-share-germany-online-2024-2026
+- Klarna brand awareness Germany: Analyzify Klarna statistics (2024 data; treat as indicative) — https://analyzify.com/statsup/klarna
+- Competitor list and Riverty brand preference: Riverty case study brief

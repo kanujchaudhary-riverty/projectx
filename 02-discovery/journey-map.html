@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future-State Journey - Riverty Mastercard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,-apple-system,sans-serif}
+body{background:#f5f8fc;color:#233043}
+.container{max-width:1500px;margin:auto;padding:40px}
+header{margin-bottom:35px}
+header h1{font-size:46px;color:#16354b}
+header p{margin-top:8px;font-size:22px;color:#4c6477}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{border-radius:22px;padding:24px;color:#183247;box-shadow:0 10px 24px rgba(0,0,0,.08);position:relative}
+.card:not(:last-child)::after{content:"➜";position:absolute;right:-18px;top:35px;font-size:30px;color:#7c8794}
+.stage{width:52px;height:52px;border-radius:50%;color:#fff;display:flex;justify-content:center;align-items:center;font-size:22px;font-weight:bold;margin-bottom:16px}
+.purple{background:#efe8ff}.purple .stage{background:#6a39ff}
+.green{background:#e8f8ed}.green .stage{background:#16a765}
+.orange{background:#fff1df}.orange .stage{background:#f68b1f}
+.blue{background:#e8f3ff}.blue .stage{background:#2979ff}
+h2{margin-bottom:6px;font-size:28px}
+.subtitle{color:#65768a;margin-bottom:22px}
+.section{background:white;border-radius:14px;padding:14px;margin-top:14px}
+.section h4{margin-bottom:6px;color:#193b5d}
+.section p{line-height:1.5;color:#526577}
+.footer{margin-top:40px;background:white;border-radius:20px;padding:28px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.footer h2{margin-bottom:20px}
+.advantages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.adv{background:#f4f9ff;border-left:6px solid #2979ff;padding:18px;border-radius:14px}
+.adv h3{margin-bottom:8px;color:#18476b}
+@media(max-width:1100px){.timeline{grid-template-columns:1fr}.card::after{display:none}.advantages{grid-template-columns:1fr}header h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Future-State Journey: Riverty Mastercard</h1>
+<p><strong>Keep it first, pay later — anywhere</strong></p>
+</header>
+
+<div class="timeline">
+<div class="card purple">
+<div class="stage">1</div>
+<h2>Join in minutes</h2>
+<div class="subtitle">From existing Riverty user to cardholder</div>
+<div class="section"><h4>User action</h4><p>Applies in the Riverty app with pre-filled details → approved once, card ready in her phone wallet.</p></div>
+<div class="section"><h4>Internal state</h4><p>Curious but cautious → confident trying Riverty beyond checkout.</p></div>
+<div class="section"><h4>Pain point addressed</h4><p>Riverty only appears at selected merchant checkouts.</p></div>
+</div>
+
+<div class="card green">
+<div class="stage">2</div>
+<h2>Use anywhere</h2>
+<div class="subtitle">Online and in-store</div>
+<div class="section"><h4>User action</h4><p>Taps the card in a shop → nothing leaves her account until repayment is due, and a return before then simply reduces what she owes.</p></div>
+<div class="section"><h4>Internal state</h4><p>Relieved and in control → no pressure from an immediate debit.</p></div>
+<div class="section"><h4>Pain point addressed</h4><p>Physical stores previously forced an immediate debit payment.</p></div>
+</div>
+
+<div class="card orange">
+<div class="stage">3</div>
+<h2>Manage simply</h2>
+<div class="subtitle">One place for everything</div>
+<div class="section"><h4>User action</h4><p>Sees every purchase, return and due date together → reminded before payment is due.</p></div>
+<div class="section"><h4>Internal state</h4><p>Organised and reassured → always knows what's due next.</p></div>
+<div class="section"><h4>Pain point addressed</h4><p>Payments fragmented across several providers and apps.</p></div>
+</div>
+
+<div class="card blue">
+<div class="stage">4</div>
+<h2>Make Riverty the default</h2>
+<div class="subtitle">An everyday relationship</div>
+<div class="section"><h4>User action</h4><p>Uses the card for everyday spending → can spread a larger purchase when she chooses to.</p></div>
+<div class="section"><h4>Internal state</h4><p>Trusting and loyal → Riverty becomes her preferred payment brand.</p></div>
+<div class="section"><h4>Pain point addressed</h4><p>No compelling reason to choose Riverty over Klarna or PayPal.</p></div>
+</div>
+</div>
+
+<div class="footer">
+<h2>Advantages over the manual workaround</h2>
+<div class="advantages">
+<div class="adv"><h3>🌍 Pay later everywhere</h3><p>No dependence on partner merchants. Works wherever Mastercard is accepted.</p></div>
+<div class="adv"><h3>↩️ Returns before repayment</h3><p>A return made before the due date reduces the balance, so money only leaves for what she keeps.</p></div>
+<div class="adv"><h3>📱 One repayment hub</h3><p>Every purchase, return and due date in one Riverty experience.</p></div>
+</div>
+</div>
+</div>
+</body>
+</html>
